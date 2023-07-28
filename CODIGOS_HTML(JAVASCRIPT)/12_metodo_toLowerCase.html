@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o metodo toUpperCase</title>
+</head>
+<body>
+    <h1><p align="center"> O METODO toLowerCase </p></h1>
+
+ <!-- CRIANDO O FORMULARIO PARA INSERSAO DE INFORMAÇOES -->
+    <form name="nomecurso" action="" method="post">
+        <p>INFORME O NOME DO CURSO:-- <input type="text" name="curso"/>(sistem)</p> 
+        <input type="button" value="validar" onclick="validar()"/>
+        <p> VALOR DO CURSO:--<input type="text" name="nome"/></p>
+    </form>
+
+    <script language="javascript">
+        <!--
+            // VARIAVEIS
+            var js_curso;
+            
+
+            // FUNÇAO
+            /*
+             O método toUpperCase() previne conflitos entre os caracteres maiúsculos, 
+             comparados por meio dos operadores relacionais == (igual a) ou != (diferente de).
+             OU SEJA O METODO toUpperCase converte letras minuscular para maiusculas
+             */
+            function validar()
+            {
+                js_curso = document.nomecurso.curso.value;
+
+                if (js_curso.toLowerCase() =='sistem') 
+                {
+                    document.nomecurso.nome.value = 'sistem';    
+                }
+                else
+                {
+                    window.alert('valor invalido !');
+
+                }
+                   
+            }
+
+         //-->
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OPERADOR TERNARIO</title>
+    </head>
+    <body>
+        <h1><p align="center">OPERADOR TERNARIO</p></h1>
+
+        <form name="valor_ternario" action="" method="post">
+            INFORME UM VALOR <input type="number" name="valor"/><br><br>
+            <input type="button" name="verificar" value="verificar" onclick="verifica()"/>
+        </form>
+
+        <script language="javascript">
+            <!--
+                // DEFININDO AS VARIAVEIS
+                var js_valor;
+
+                // CAPTURANDO VALORES
+                function verifica()
+                {
+                    js_valor = parseInt(document.valor_ternario.valor.value);
+
+                 // MOSTRAR VALORES atraves do operador ternario ?:
+
+                document.write('==================== verifica se o valor informado é igual a 1 =============<br>')
+                 ((js_valor==1)? document.write('o valor é igual a 1'): document.write('o valor e diferente de 1'))
+                 //   document.write(js_valor);
+                }
+            //-->
+
+        </script>
+    </body>
+</html>

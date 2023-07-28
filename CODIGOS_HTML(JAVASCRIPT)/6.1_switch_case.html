@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>VERIFICA MES</title>
+</head>
+<body>
+    <h1><p align="center">VERIFICA MES</p></h1>
+
+    <!-- CAPTURA DE VALORES VIA FORMULARIO-->
+    <form name="verifica_mes" action="" method="post">
+        <p>Informe uma numero entre 1 a 12 <input type="number" name="MES"/></p><br>
+        <input type="button" class="btn btn-success" name="processar" value="processar" size="50%" onclick="verificarMES()"/> <br><br>
+        O valor digitado se refere ao mes =><input type="text" name="mostrar" size="20%"/>    
+    </form>
+    
+    <!-- CODIGO JAVASCRIPT ABAIXO-->
+    <script language="javascript">
+        <!--
+            // DEFININDO AS VARIAVEIS
+            var js_mes;
+            
+            // DEFININDO A FUNÇAO RESPONSAVEL POR VERIFICAR AS INFORMAÇOES INSERIDAS NO FORMULARIO
+            function verificarMES()
+            {
+                js_mes = parseInt(document.verifica_mes.MES.value);
+              
+                switch (js_mes) {
+                    case 1: document.verifica_mes.mostrar.value='JANEIRO'; break;
+                    case 2: document.verifica_mes.mostrar.value='FEVEREIRO'; break;
+                    case 3: document.verifica_mes.mostrar.value='MARÇO'; break;
+                    case 4: document.verifica_mes.mostrar.value='ABRIL'; break;
+                    case 5: document.verifica_mes.mostrar.value='MAIO'; break;
+                    case 6: document.verifica_mes.mostrar.value='JUNHO'; break;
+                    case 7: document.verifica_mes.mostrar.value='JULHO'; break;
+                    case 8: document.verifica_mes.mostrar.value='AGOSTO'; break;
+                    case 9: document.verifica_mes.mostrar.value='SETEMBRO'; break;
+                    case 10: document.verifica_mes.mostrar.value='OUTUBRO'; break;
+                    case 11: document.verifica_mes.mostrar.value='NOVEMBRO'; break;
+                    case 12: document.verifica_mes.mostrar.value='DESEMBRO'; break;
+                    default: document.verifica_mes.mostrar.value='informe um valor valido'; break;
+                }
+            }
+        //-->
+
+    </script>
+</body>
+</html>
